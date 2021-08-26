@@ -1,5 +1,5 @@
 import setuptools
-from packagename.version import Version
+from resizePixel.version import Version
 
 
 setuptools.setup(name='resizePixel',
@@ -9,9 +9,10 @@ setuptools.setup(name='resizePixel',
                  author='mkshgh',
                  author_email='mukesh.ghimire@outlook.com',
                  url='mghimire.com.np',
-                 py_modules=['packagename'],
+                 py_modules=['resizePixel'],
                  install_requires=[],
                  license='MIT License',
                  zip_safe=False,
                  keywords='resize image',
-                 classifiers=['Packages', 'ResizePixel'])
+                 package_dir={"": "src"},
+                 classifiers=['Packages', 'resizePixel'])

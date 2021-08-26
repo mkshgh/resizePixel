@@ -48,13 +48,17 @@ pip install -r requirements.txt
 
 <code>
 
-    # import library
+    # import library 
 
     from resizePixel.resizePixel import rpImage,reduce_qualtiy
     from PIL import Image
-
+    import os
     # image path
-    image_path = "img.jpg"
+    image_path = r"C:\Users\mkshgh\Downloads\img.png"
+    # I am saving in the same directory 
+    # img_path,img_name > C:\Users\mkshgh\Downloads, img.png
+    img_path,img_name = os.path.split(image_path)
+    output_img_name = 'output_'+img_name
 
     # open the image and check the current quality
     image_file = Image.open(image_path)
@@ -63,7 +67,8 @@ pip install -r requirements.txt
     print(info)
 
     # decrease quality explained above
-    new_image = reduce_qualtiy(image_path,image_file,quality=50)
+    # Use quality from 1 to 99; 99 being the best and 1 being the worst quality
+    # If the quality of the image is already low use 1 to 20; works great with larger files.
+    new_image = reduce_qualtiy(output_img_name,image_file,quality=50,outputdir=img_path)
     print(new_image)
-        
 </code>

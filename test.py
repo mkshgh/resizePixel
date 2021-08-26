@@ -1,23 +1,33 @@
-from PIL import Image
-from PIL.ExifTags import TAGS
+from setuptools import setup, find_packages
+from resizePixel.version import Version
+import os
 
-# path to the image or video
-imagename = "test.jpg"
+here = os.path.abspath(os.path.dirname(__file__))
 
-# read the image data using PIL
-image = Image.open(imagename)
+VERSION = '0.0.13'
+DESCRIPTION = 'Python Resize Pixel'
+LONG_DESCRIPTION = open('README.md').read().strip()
 
-# extract EXIF data
-exifdata = image.getexif()
-
-print(exifdata)
-# iterating over all EXIF data fields
-for tag_id in exifdata:
-    # get the tag name, instead of human unreadable tag id
-    tag = TAGS.get(tag_id, tag_id)
-    data = exifdata.get(tag_id)
-    # decode bytes 
-    if isinstance(data, bytes):
-        data = data.decode()
-        print(data.type())
-    print(f"{tag:25}: {data}")
+# Setting up
+setup(
+    name='resizePixel',
+    version=Version('1.0.0').number,
+    author="mkshgh",
+    author_email="<mukesh.ghimire@outlook.com>",
+    description=DESCRIPTION,
+    long_description_content_type="text/markdown",
+    long_description=LONG_DESCRIPTION,
+    url='mghimire.com.np',
+    packages=find_packages(),
+    package_dir={'','src'},
+    install_requires=['pytest', 'pytest-cov', 'PIL'],
+    keywords=['python', 'image', 'image quality', 'reduce', 'increase', 'frustrated'],
+    classifiers=[
+        "Development Status :: 1 - Testing",
+        "Intended Audience :: Dreamers",
+        "Programming Language :: Python :: 3",
+        "Operating System :: Unix",
+        "Operating System :: MacOS :: MacOS X",
+        "Operating System :: Microsoft :: Windows",
+    ]
+)
