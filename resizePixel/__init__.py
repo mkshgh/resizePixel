@@ -1,1 +1,1 @@
-from resizePixel import *
+from .resizePixel import *
