@@ -1,10 +1,8 @@
 import pytest
-from tests.tests_helper import *
+from resizePixel.resizePixel import *
 import unittest
-from tests.helpers import *
 
 __all__ = [
     'pytest',
     'unittest',
-    'tests_helper'
 ]
