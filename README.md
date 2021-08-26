@@ -11,19 +11,25 @@ change quality of the image
 Basic structure of package is
 
 ```
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── LICENSE
 ├── README.md
-├── resizePixel
-│   ├── __init__.py
-│   ├── resizePixel.py
-│   └── version.py
+├── __init__.py
 ├── pytest.ini
-├── requirements.txt
+├── resizePixel
+│   ├── __init__.py
+│   ├── resizePixel.py
+│   └── version.py
+├── script
+│   └── test
 ├── setup.py
+├── test.py
 └── tests
     ├── __init__.py
     ├── helpers
-    │   ├── __init__.py
-    │   └── my_helper.py
+    │   ├── __init__.py
+    │   └── my_helper.py
     ├── tests_helper.py
     └── unit
         ├── __init__.py
