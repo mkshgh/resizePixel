@@ -1,8 +1,8 @@
 resizePixel
 ==========================
 
-[![Build Status](https://travis-ci.org/mtchavez/python-package-boilerplate.png?branch=master)](https://travis-ci.org/mtchavez/python-package-boilerplate)
-[![Requires.io](https://requires.io/github/mtchavez/python-package-boilerplate/requirements.svg?branch=master)](https://requires.io/github/mtchavez/python-package-boilerplate/requirements?branch=master)
+[![Build Status](https://travis-ci.org/mtchavez/python-package-boilerplate.png?branch=master)](https://github.com/mkshgh/resizePixel)
+
 
 change quality of the image
 
