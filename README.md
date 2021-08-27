@@ -11,7 +11,6 @@ change quality of the image
 Basic structure of package is
 
 ```
-.
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
 ├── LICENSE
